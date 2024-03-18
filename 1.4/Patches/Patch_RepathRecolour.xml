@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Archorace"]/alienRace/graphicPaths</xpath>
+		<value>
+			<graphicPaths Inherit="False">
+				<body>ArchotechRace/Pawn/Archotech/Body/</body>
+				<head>ArchotechRace/Pawn/Archotech/Head/</head>
+                <skinShader>Cutout</skinShader>
+			</graphicPaths>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Archorace"]/alienRace/generalSettings/alienPartGenerator/colorChannels</xpath>
+		<value>
+			<colorChannels>
+				<li>
+					<name>skin</name>
+					<first Class="ColorGenerator_Options">
+						<options>
+							<li>
+								<weight>10</weight>
+								<only>RGB(255, 255, 255)</only>
+							</li>
+						</options>
+					</first>
+					<second Class="ColorGenerator_Options">
+						<options>
+							<li>
+								<weight>10</weight>
+								<only>RGB(255, 255, 255)</only>
+							</li>
+						</options>
+					</second>
+				</li>
+			</colorChannels>
+		</value>
+	</Operation>
+
+</Patch>
